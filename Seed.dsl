@@ -49,9 +49,7 @@ job('reload_docker') {
     shell('docker rm -vf grid')
     shell('docker pull elgalu/selenium')
     shell('''docker run -d --name=grid -p 4444:24444 -p 5900:25900 \
-    --shm-size=1g -e VNC_PASSWORD=hola \
-    -e MAX_INSTANCES=3 -e MAX_SESSIONS=3 \
-    elgalu/selenium''')
+    -e TZ="US/Pacific" --shm-size=1g elgalu/selenium''')
     shell('docker exec grid wait_all_done 30s')
   }
 }
