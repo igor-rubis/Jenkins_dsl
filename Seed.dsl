@@ -27,7 +27,7 @@ job('packt') {
 }
 
 job('booker') {
-  logRotator(5, 10)
+  logRotator(5, 5)
   
   wrappers {
       timestamps()
