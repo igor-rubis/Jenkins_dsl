@@ -1,5 +1,5 @@
 job('packt') {
-  logRotator(5, 5)
+  logRotator(3, 5)
   triggers {
         cron('0 4 * * *')
     }
@@ -23,7 +23,7 @@ job('packt') {
 }
 
 job('booker') {
-  logRotator(5, 5)
+  logRotator(5, 10)
   
   steps{
     gradle {
