@@ -1,4 +1,5 @@
 job('packt') {
+  logRotator(5, 5)
   triggers {
         cron('0 4 * * *')
     }
