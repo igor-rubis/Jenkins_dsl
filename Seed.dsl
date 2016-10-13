@@ -12,3 +12,15 @@ job('packt') {
     }
   }
 }
+
+job('booker') {
+  logRotator(5, 5)
+  
+  steps{
+    gradle {
+      useWrapper(false)
+      buildFile '/var/lib/jenkins/Booker/build.gradle'
+      tasks 'run'
+    }
+  }
+}
