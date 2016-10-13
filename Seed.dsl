@@ -4,6 +4,10 @@ job('packt') {
         cron('0 4 * * *')
     }
   
+  wrappers {
+      timestamps()
+  }
+  
   steps{
     gradle {
       useWrapper(false)
@@ -24,6 +28,10 @@ job('packt') {
 
 job('booker') {
   logRotator(5, 10)
+  
+  wrappers {
+      timestamps()
+  }
   
   steps{
     gradle {
