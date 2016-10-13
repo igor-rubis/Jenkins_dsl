@@ -1,6 +1,4 @@
 job('packt') {
-  jdk('Oracle_Java_8')
-  
   triggers {
         cron('0 4 * * *')
     }
