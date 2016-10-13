@@ -28,6 +28,7 @@ job('booker') {
     downstreamParameterized {
       trigger('reload_docker'){
         condition('ALWAYS')
+        triggerWithNoParameters(true)
       }
     }
   }
