@@ -23,6 +23,14 @@ job('booker') {
       tasks 'run'
     }
   }
+  
+  publishers {
+    downstreamParameterized {
+      trigger('reload_docker'){
+        condition('ALWAYS')
+      }
+    }
+  }
 }
 
 job('reload_docker') {
