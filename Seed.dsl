@@ -15,15 +15,6 @@ job('packt') {
       tasks 'get'
     }
   }
-  
-  publishers {
-    downstreamParameterized {
-      trigger('reload_docker'){
-        condition('UNSTABLE_OR_WORSE')
-        triggerWithNoParameters(true)
-      }
-    }
-  }
 }
 
 job('booker') {
