@@ -31,14 +31,14 @@ job('booker') {
       tasks 'run'
     }
   }
-  publishers {
+  /*publishers {
     downstreamParameterized {
       trigger('reload_docker'){
         condition('ALWAYS')
         triggerWithNoParameters(true)
       }
     }
-  }
+  }*/
   
 }
 
