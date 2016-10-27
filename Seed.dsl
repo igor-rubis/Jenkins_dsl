@@ -26,6 +26,7 @@ job('booker') {
   
   steps{
     gradle {
+      gradleName('gradle')
       useWrapper(false)
       buildFile '/var/lib/jenkins/Booker/build.gradle'
       tasks 'run'
