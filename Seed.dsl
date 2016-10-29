@@ -10,6 +10,7 @@ job('packt') {
   
   steps{
     gradle {
+      gradleName('gradle')
       useWrapper(false)
       buildFile '/var/lib/jenkins/Packt/build.gradle'
       tasks 'get'
