@@ -22,10 +22,10 @@ job('booker') {
   logRotator(5, 5)
   
   wrappers {
-      timestamps()
+    timestamps()
   }
   
-  steps{
+  steps {
     gradle {
       gradleName('gradle')
       useWrapper(false)
