@@ -1,8 +1,8 @@
 job('packt') {
   logRotator(3, 5)
-  triggers {
+  /*triggers {
         cron('0 4 * * *')
-    }
+    }*/
   
   wrappers {
       timestamps()
